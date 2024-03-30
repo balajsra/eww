@@ -1,0 +1,42 @@
+#+TITLE: Personal EWW Configuration
+#+AUTHOR: Sravan Balaji
+#+AUTO_TANGLE: t
+#+STARTUP: showeverything
+
+* Table of Contents :TOC_3:noexport:
+- [[#welcome][Welcome]]
+- [[#widgets][Widgets]]
+- [[#styling][Styling]]
+
+* Welcome
+
+My personal configuration of EWW, written as an [[https://orgmode.org][Org Mode]] document.
+
+Run the block below with ~C-c C-c~ to tangle code blocks to config file.
+
+#+BEGIN_SRC emacs-lisp :tangle no
+(org-mode-restart)
+(org-babel-tangle)
+#+END_SRC
+
+* Widgets
+
+#+BEGIN_SRC yuck :tangle eww.yuck
+(defwindow example
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "20px"
+                               :width "90%"
+                               :height "30px"
+                               :anchor "top center")
+           :stacking "fg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "dock"
+           :wm-ignore false
+  "example content")
+#+END_SRC
+
+* Styling
+
+#+BEGIN_SRC scss :tangle eww.scss
+#+END_SRC
